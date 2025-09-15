@@ -1,0 +1,58 @@
+:root{
+    --cream: #FFF5E1;
+    --pink: #FFC0CB;
+    --choco: #8B4513;
+    --brownText: #5D4037;
+  }
+
+html, body { height: 100%; }
+body{
+    font-family: Arial, sans-serif;
+    color: var(--brownText);
+    background: var(--cream);
+    margin: 0;
+    padding: 0;
+}
+
+.bg-ch--cream{ background-color: var(--cream) !important; }
+.text-ch--brown{ color: var(--brownText) !important; }
+.link-brown{ color: var(--brownText); text-decoration: none; }
+.link-brown:hover{ text-decoration: underline; }
+
+.btn-ch--pink{
+    background: var(--pink);
+    border-color: var(--pink);
+    color: #5a2a2a;
+}
+.btn-ch--pink:hover{ filter: brightness(0.95); }
+
+.brand-logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+    color: var(--choco);
+}
+
+.navbar {
+  background-color: var(--cream);
+}
+.navbar .nav-link{ color: var(--brownText); }
+.navbar .nav-link:hover{ color: var(--choco); }
+
+/* Custom styles for buttons */
+.btn-primary {
+  background-color: var(--pink);
+  border-color: var(--pink);
+  color: #5a2a2a;
+}
+.btn-primary:hover {
+  filter: brightness(0.9);
+}
+
+/* Footer links */
+footer a {
+  text-decoration: none;
+  color: var(--brownText);
+}
+footer a:hover {
+  text-decoration: underline;
+}
