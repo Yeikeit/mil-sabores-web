@@ -3,11 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login</title>
+  <title>Perfil</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
@@ -35,10 +41,9 @@
 
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item me-lg-3">
-            <a class="nav-link small" href="#">Iniciar sesión</a>
-          </li>
-          <li class="nav-item me-lg-3">
-            <a class="btn btn-ch--pink btn-sm" href="#">Registrar usuario</a>
+            <button class="btn btn-ch--pink btn-sm" id="userButton" onclick="window.location.href='./editar-usuario.html'">
+              Nombre usuario
+            </button>
           </li>
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center" href="#">
@@ -51,40 +56,33 @@
     </div>
   </nav>
 
-
-  <main class="container my-5 flex-grow-1">
-    <!-- Logo grande y nombre empresa -->
-    <div class="text-center mb-3">
-      <img src="./assets/icon.png" class="img-fluid" style="height: 200px;" alt="Logo empresa">
-    </div>
-    <h1 class="h3 text-center mb-4">Pasteleria mil sabores</h1>
-
-
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card shadow-sm">
-          <div class="card-header bg-light">
-            <strong class="small text-muted">Inicio de sesión</strong>
-          </div>
-          <div class="card-body">
-            <form id="loginForm">
-                <div class="mb-3">
-                  <label for="loginEmail" class="form-label">Correo</label>
-                  <input type="email" id="loginEmail" class="form-control" required>
-                </div>
-                <div class="mb-4">
-                  <label for="loginPassword" class="form-label">Contraseña</label>
-                  <input type="password" id="loginPassword" class="form-control" required>
-                </div>
-                <div id="alerts" class="mb-3"></div>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary btn-lg px-5">Iniciar sesión</button>
-                </div>
-              </form>
-          </div>
-        </div>
+  <main class="container my-5">
+    <h1 class="text-center mb-4">Editar Perfil</h1>
+    <form id="editUserForm">
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Nombre Completo</label>
+        <input type="text" class="form-control" id="fullName" required>
       </div>
-    </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="birthdate" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="birthdate" required>
+      </div>
+      <div class="mb-3">
+        <label for="region" class="form-label">Región</label>
+        <input type="text" class="form-control" id="region" required>
+      </div>
+      <div class="mb-3">
+        <label for="comuna" class="form-label">Comuna</label>
+        <input type="text" class="form-control" id="comuna" required>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </form>
   </main>
 
   <footer class="py-4 bg-ch--cream">
@@ -129,7 +127,7 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/login.js" defer></script>
+  <script src="js/editar-usuario.js" defer></script>
 
 </body>
 </html>
