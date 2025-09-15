@@ -32,9 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
       alerts.innerHTML =
         alertHtml('success', `Inicio de sesión correcto. ¡Hola, ${user.fullName}!`);
-  
+
+
       
-      setTimeout(() => location.href = '../index.html', 1200);
+      setTimeout(() => location.href = '../index-user.html', 1200);
     });
   });
   

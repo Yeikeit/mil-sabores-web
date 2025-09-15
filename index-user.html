@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pasteleria mil sabores</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg bg-ch--cream border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/icon.png" alt="Pastelería Mil Sabores" style="height: 130px; background: none;" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item me-lg-3">
+            <button class="btn btn-ch--pink btn-sm" id="userButton" onclick="window.location.href='./editar-usuario.html'">
+              Nombre usuario
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" href="#">
+              <i class="bi bi-cart3 fs-5 me-1"></i>
+              <span>Cart (<span id="cartCount">0</span>)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <footer class="py-4 bg-ch--cream">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="brand-logo mb-2">Pasteleria mil sabores</div>
+          <small class="text-secondary d-block">Desde 1974 endulzando momentos.</small>
+        </div>
+
+        <div class="col-6 col-lg-4">
+          <h4 class="h6 text-ch--brown">Categorías</h4>
+          <ul class="list-unstyled small">
+            <li><a class="link-brown" href="#">Tortas Cuadradas</a></li>
+            <li><a class="link-brown" href="#">Tortas Circulares</a></li>
+            <li><a class="link-brown" href="#">Postres Individuales</a></li>
+            <li><a class="link-brown" href="#">Sin Azúcar</a></li>
+            <li><a class="link-brown" href="#">Sin Gluten</a></li>
+            <li><a class="link-brown" href="#">Veganas</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-4">
+          <h4 class="h6 text-ch--brown">Métodos de pago</h4>
+          <div class="d-flex gap-3 fs-3">
+            <i class="bi bi-credit-card"></i>
+            <i class="bi bi-credit-card-2-front"></i>
+            <i class="bi bi-apple"></i>
+            <i class="bi bi-google"></i>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+      <div class="d-flex justify-content-between small">
+        <span>© 2025 Pastelería Pasteleria mil sabores</span>
+        <a class="link-brown" href="#">Términos y privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,15 +1,18 @@
 {
     "users": [
         {
+            "id": 1,
             "fullName": "Maria Lopez",
             "email": "maria@duocuc.cl",
             "password": "123",
             "birthdate": "1970-05-10",
             "region": "Metropolitana",
             "comuna": "Santiago",
-            "hasDiscount50": false
+            "hasDiscount50": false,
+            "isDuoc": true
         },
-        {
+        {   
+            "id": 2,
             "fullName": "Juan Perez",
             "email": "juan@example.com",
             "password": "123",
@@ -17,7 +20,8 @@
             "birthdate": "1970-05-15",
             "region": "Metropolitana",
             "comuna": "Santiago",
-            "hasDiscount50": true
+            "hasDiscount50": true,
+            "isDuoc": false
         }
     ]
 }
