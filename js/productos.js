@@ -3,11 +3,13 @@ const URL = "./assets/product.json";
 let product = []
 
 
-function mostrarProductos({ id, imagen, nombre, precio, descripcion } = product) {
+function mostrarProductos({ id, nombre, precio, descripcion } = product) {
     return `    
             <div class="col-md-3 mb-4">
                 <div class="card h-100 text-center">
-                    <img src="assets/${imagen}" class="card-img-top" alt="${nombre}">
+                    <div class="ratio ratio-4x3">
+                        <img src="assets/TortasProducto/${id}.png" class="object-fit-cover w-100 h-100 rounded" alt="${nombre}">
+                    </div>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">${nombre}:</h5>
                         <p class="card-text">${descripcion}</p>
@@ -31,7 +33,7 @@ function actualizarContadorCarrito() {
     }
 }
 
-// Modifica agregarAlCarrito para actualizar el contador
+
 function agregarAlCarrito(id) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const index = carrito.findIndex(item => item.id === id);
@@ -41,7 +43,7 @@ function agregarAlCarrito(id) {
         carrito.push({ id, cantidad: 1 });
     }
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    actualizarContadorCarrito(); // <-- Actualiza el contador
+    actualizarContadorCarrito(); 
     alert('Producto agregado al carrito');
 }
 
