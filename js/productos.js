@@ -1,9 +1,9 @@
-const main = document.querySelector('div.principal#principal')
+
+const main = document.querySelector('div.principal#principal');
 const URL = "./assets/product.json";
-let product = []
+let productos = [];
 
-
-function mostrarProductos({ id, nombre, precio, descripcion } = product) {
+function mostrarProductos({ id, nombre, precio, descripcion }) {
     return `    
             <div class="col-md-3 mb-4">
                 <div class="card h-100 text-center">
@@ -23,7 +23,6 @@ function mostrarProductos({ id, nombre, precio, descripcion } = product) {
             `;
 }
 
-
 function actualizarContadorCarrito() {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const total = carrito.reduce((sum, item) => sum + item.cantidad, 0);
@@ -32,7 +31,6 @@ function actualizarContadorCarrito() {
         cartCount.textContent = total;
     }
 }
-
 
 function agregarAlCarrito(id) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -66,10 +64,34 @@ function cargarProductos(array) {
 function pedirProductos() {
     fetch(URL)
         .then(response => response.json())
-        .then(data => cargarProductos(data.productos))
+        .then(data => {
+            productos = data.productos;
+            cargarProductos(productos);
+            inicializarFiltros();
+        })
         .catch(error => console.error('Error cargando productos:', error));
 }
 pedirProductos();
+
+function filtrarProductos() {
+    const forma = document.getElementById('filtroForma').value;
+    const sabor = document.getElementById('filtroSabor').value;
+    const tipo = document.getElementById('filtroTipo').value;
+
+    let filtrados = productos.filter(p => {
+        let okForma = !forma || p.categorias.includes(forma);
+        let okSabor = !sabor || p.categorias.includes(sabor);
+        let okTipo = !tipo || p.categorias.includes(tipo);
+        return okForma && okSabor && okTipo;
+    });
+    cargarProductos(filtrados);
+}
+
+function inicializarFiltros() {
+    document.getElementById('filtroForma').addEventListener('change', filtrarProductos);
+    document.getElementById('filtroSabor').addEventListener('change', filtrarProductos);
+    document.getElementById('filtroTipo').addEventListener('change', filtrarProductos);
+}
 
 function obtenerDetalleProducto(id) {
     fetch("assets/product.json")
