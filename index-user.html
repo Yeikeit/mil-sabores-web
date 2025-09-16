@@ -20,41 +20,44 @@
 <body>
 
 
-  <nav class="navbar navbar-expand-lg bg-ch--cream border-bottom sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/icon.png" alt="Pastelería Mil Sabores" style="height: 130px; background: none;" />
-      </a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-ch--cream border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/icon.png" alt="Pastelería Mil Sabores" style="height: 130px; background: none;" />
+        </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div id="mainNav" class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-        </ul>
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog1.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
+          </ul>
 
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item me-lg-3">
-            <button class="btn btn-ch--pink btn-sm" id="userButton" onclick="window.location.href='./editar-usuario.html'">
-              Nombre usuario
-            </button>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex align-items-center" href="#">
-              <i class="bi bi-cart3 fs-5 me-1"></i>
-              <span>Cart (<span id="cartCount">0</span>)</span>
-            </a>
-          </li>
-        </ul>
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item me-lg-3">
+              <a class="nav-link small" href="login.html">Iniciar sesión</a>
+            </li>
+            <li class="nav-item me-lg-3">
+              <a class="btn btn-ch--pink btn-sm" href="formulario.html">Registrar usuario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="./carrito.html">
+                <i class="bi bi-cart3 fs-5 me-1"></i>
+                <span>Cart (<span id="cartCount">0</span>)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <footer class="py-4 bg-ch--cream">
     <div class="container">

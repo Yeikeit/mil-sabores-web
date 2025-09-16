@@ -31,56 +31,43 @@
   </nav>
 
 
-<header class="bg-ch--cream border-bottom">
-    <div class="container py-5">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-7">
-          <span class="badge rounded-pill text-bg-secondary mb-2">Desde 1974</span>
-          <h1 class="display-6 fw-bold mb-2">Conoce nuestra historia</h1>
-          <p class="lead mb-4">
-            Más de 50 años endulzando momentos en Chile y partícipes del récord Guinness de 1995
-            por la torta más grande del mundo.
-          </p>
-          <div class="d-flex gap-3 flex-wrap">
-            <a href="productos.html" class="btn btn-ch--pink">Ver catálogo</a>
-            <a href="blogs.html" class="btn btn-outline-secondary">Leer recetas & blog</a>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="ratio ratio-16x9 rounded bg-light d-flex align-items-center justify-content-center">
-            <img src="./assets/equipo.png" alt="">
-          </div>
-        </div>
-      </div>
-  
-      <!-- Métricas rápidas -->
-      <div class="row text-center g-3 mt-4">
-        <div class="col-4 col-lg-2 offset-lg-3">
-          <div class="card h-100 border-0">
-            <div class="card-body">
-              <div class="h3 mb-0">50+</div>
-              <small class="text-secondary">Años de historia</small>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-lg-2">
-          <div class="card h-100 border-0">
-            <div class="card-body">
-              <div class="h3 mb-0">8</div>
-              <small class="text-secondary">Categorías</small>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 col-lg-2">
-          <div class="card h-100 border-0">
-            <div class="card-body">
-              <div class="h3 mb-0">1995</div>
-              <small class="text-secondary">Récord Guinness</small>
-            </div>
-          </div>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-ch--cream border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/icon.png" alt="Pastelería Mil Sabores" style="height: 130px; background: none;" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="mainNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog1.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item me-lg-3">
+              <a class="nav-link small" href="login.html">Iniciar sesión</a>
+            </li>
+            <li class="nav-item me-lg-3">
+              <a class="btn btn-ch--pink btn-sm" href="formulario.html">Registrar usuario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="./carrito.html">
+                <i class="bi bi-cart3 fs-5 me-1"></i>
+                <span>Cart (<span id="cartCount">0</span>)</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
   
   <main>
