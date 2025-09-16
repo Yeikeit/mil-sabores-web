@@ -54,11 +54,48 @@
       
 
     <main>
-        <section class="container my-5">
-            <div class="row">
-                <h2 class="my-4 text-center">Nuestros Productos</h2>
-                <div class="principal" id="principal"></div>
-        </section>
+    <section class="container my-5">
+      <h2 class="my-4 text-center">Nuestros Productos</h2>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <label for="filtroForma" class="form-label">Filtrar por forma</label>
+          <select id="filtroForma" class="form-select">
+            <option value="">Todas</option>
+            <option value="cuadrada">Cuadrada</option>
+            <option value="circular">Circular</option>
+            <option value="individual">Individual</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="filtroSabor" class="form-label">Filtrar por sabor</label>
+          <select id="filtroSabor" class="form-select">
+            <option value="">Todos</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="vainilla">Vainilla</option>
+            <option value="frutas">Frutas</option>
+            <option value="manjar">Manjar</option>
+            <option value="naranja">Naranja</option>
+            <option value="almendras">Almendras</option>
+            <option value="avena">Avena</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="filtroTipo" class="form-label">Filtrar por tipo</label>
+          <select id="filtroTipo" class="form-select">
+            <option value="">Todos</option>
+            <option value="torta">Torta</option>
+            <option value="pan">Pan</option>
+            <option value="galleta">Galleta</option>
+            <option value="postre">Postre</option>
+            <option value="tarta">Tarta</option>
+            <option value="pastelería">Pastelería</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="principal" id="principal"></div>
+      </div>
+    </section>
 
     </main>
     <footer class=" py-4 bg-ch--cream">
