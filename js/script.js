@@ -3,7 +3,7 @@ const URL = "./assets/product.json";
 let product = []
 
 
-function mostrarProductos({ id, imagen, nombre, precio, descripcion } = product) {
+function mostrarProductos({ imagen, nombre, precio } = product) {
     return `    
             <div class="col-md-3 mb-4">
                 <div class="card h-100">
