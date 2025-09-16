@@ -10,10 +10,9 @@ function mostrarProductos({ id, imagen, nombre, precio, descripcion } = product)
                     <img src="assets/${imagen}" class="card-img-top" alt="${nombre}">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">${nombre}:</h5>
-                        <p class="card-text">${descripcion}</p>
-                        <div class="mt-auto">
-                            <span class="text-ch--pink h5">${precio}</span>
-                            <a href="./productos.html" class="btn btn-ch--pink btn-sm float-end">Ver Producto</a>
+                        <div class="mt-auto d-flex justify-content-between align-items-center">
+                            <a href="./productos.html" class="btn btn-ch--pink btn-sm">Ver Producto</a>
+                            <span class="text-ch--pink h5 mb-0">${precio}</span>
                         </div>
                     </div>
                 </div>
