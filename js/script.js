@@ -44,4 +44,7 @@ function pedirProductos() {
         .then(data => cargarProductos(data.productos))
         .catch(error => console.error('Error cargando productos:', error));
 }
+
+
+
 pedirProductos();

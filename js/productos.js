@@ -70,3 +70,20 @@ function pedirProductos() {
         .catch(error => console.error('Error cargando productos:', error));
 }
 pedirProductos();
+
+function obtenerDetalleProducto(id) {
+    fetch("assets/product.json")
+        .then(response => response.json())
+        .then(data => {
+            const producto = data.productos.find(producto => producto.id === id);
+            if (producto) {
+                document.querySelector(".detalle-imagen").src = `../../assets/${producto.imagen}`;
+                document.querySelector(".detalle-nombre").textContent = producto.nombre;
+                document.querySelector(".detalle-descripcion").textContent = producto.descripcion;
+                document.querySelector(".detalle-precio").textContent = `$${producto.precio}`;
+            } else {
+                console.error("Producto no encontrado");
+            }
+        })
+        .catch(error => console.error("Error al cargar los detalles del producto:", error));
+}
